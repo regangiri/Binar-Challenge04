@@ -88,18 +88,6 @@ function Homepage() {
                         setSearchingCar(false);
                         getCarById(data.id);
                         setShowDetailCar(true);
-                        // return carId.map((data) => {
-                        //   return (
-                        //     <Detailcar
-                        //       id={data.id}
-                        //       startRent={data.start_rent_at}
-                        //       name={data.name}
-                        //       image={data.image}
-                        //       price={data.price}
-                        //       status={data.status}
-                        //     />
-                        //   );
-                        // });
                       }}
                     />
                   </div>

@@ -3,49 +3,6 @@ import axios from "axios";
 import Carcard from "./Carcard";
 
 function Searchcontainer(props) {
-  const [carData, setCarData] = useState([]);
-  const [isClicked, setIsClicked] = useState(false);
-  // const [tanggal, setTanggal] = useState("");
-  // const [waktuJemput, setWaktuJemput] = useState("");
-  // const [tipeDriver, setTipeDriver] = useState("");
-  // const [jumlahPenumpang, setJumlahPenumpang] = useState(0);
-
-  useEffect(() => {
-    getCarData();
-    console.log(carData);
-  }, []);
-
-  async function getCarData() {
-    await axios
-      .get("https://rent-cars-api.herokuapp.com/admin/car")
-      .then((res) => {
-        setCarData(res.data);
-        console.log(carData);
-      });
-  }
-
-  function searchButtonClicked(e) {
-    e.preventDefault();
-    setIsClicked(!isClicked);
-  }
-
-  // const carDataIteration = carData.map((data) => {
-  //   return (
-  //     <Carcard
-  //       id={data.id}
-  //       startRent={data.start_rent_at}
-  //       name={data.name}
-  //       image={data.image}
-  //       price={data.price}
-  //       status={data.status}
-  //     />
-  //   );
-  // });
-
-  // useEffect(() => {
-  //   alert(`${tipeDriver}, ${tanggal}, ${waktuJemput}, ${jumlahPenumpang}`);
-  // }, [tipeDriver]);
-
   return (
     <div className="flex flex-colitems-center font-helvetica justify-center  text-black bg-primary">
       <form className="flex sm:flex-row flex-col text-xs sm:text-sm  bg-white w-full lg:w-3/4 py-3 items-center justify-center border-black rounded-lg">
@@ -111,7 +68,8 @@ function Searchcontainer(props) {
             type="submit"
             onClick={props.searchCar}
           >
-            {isClicked ? <p>edit</p> : <p>Cari Mobil</p>}
+            Cari Mobil
+            {/* {isClicked ? <p>edit</p> : <p>Cari Mobil</p>} */}
           </button>
         </div>
       </form>
