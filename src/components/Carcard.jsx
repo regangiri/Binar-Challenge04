@@ -23,7 +23,7 @@ function Carcard(props) {
         </p>
       </div>
       <button
-        className="w-5/6 mx-8 my-3 h-10 text-white font-bold font-helvetica bg-[#5CB85F]"
+        className="w-5/6 mx-8 my-3 h-10 text-white font-bold font-helvetica bg-blue-600"
         onClick={props.detailCar}
       >
         {" "}
